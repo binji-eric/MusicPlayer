@@ -49,7 +49,8 @@
         <div style="margin-top: 10px">
             <el-row>
                 <template v-for="(item, index) in this.hotSongList">
-                    <el-col :span="6" :key=index>
+                    <div v-if="parseInt(index)%4==0" :key="item.name" class="hideLine">-</div>
+                    <el-col :span="6" :key=index style="float: left">
                         <div @click="goToSongDetail(item.id)">
                             <song-format :imgUrl="item.coverImgUrl"
                                         :topMsg= "item.playCount"
@@ -208,5 +209,12 @@ export default {
     }
     .secondCategory:hover {
         color red
+    }
+    .hideLine {
+        opacity 0
+        border 1px solid transparent
+        margin 0
+        padding 0
+        height 2
     }
 </style>

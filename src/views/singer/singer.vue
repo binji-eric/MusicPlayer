@@ -33,6 +33,7 @@
         <div class="main">
             <el-row>
                 <template v-for="(item, index) in singers">
+                        <div v-if="parseInt(index)%4==0" :key="item.name" class="hideLine">-</div>
                         <el-col :span="6" :key="index">
                             <singer-format
                                 :imgUrl="item.picUrl"
@@ -164,5 +165,12 @@ export default {
             color: red;
             font-weight: bold;
         }
+    }
+    .hideLine {
+        opacity 0
+        border 1px solid transparent
+        margin 0
+        padding 0
+        height 2
     }
 </style>

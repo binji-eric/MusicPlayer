@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="outsider">
         <el-header>
             <!-- <h1>This is header</h1> -->
             <el-menu
@@ -7,7 +7,7 @@
                 mode="horizontal"
                 background-color="rgb(228, 228, 228)"
                 text-color="black"
-                active-text-color="red"
+                active-text-color="rgb(196, 70, 58)"
                 >
                 <el-menu-item index="1">
                     <router-link to="/recommend">
@@ -68,7 +68,7 @@
             </el-main>
         </el-container>
         <el-footer>
-             <h1>This is footer</h1>
+             <!-- <h1>This is footer</h1> -->
         </el-footer>
         <music-bar class="musicBar"></music-bar>
     </div>
@@ -144,6 +144,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+    #outsider
+        background-color rgb(228,228,228)
     a {
         text-decoration: none;
     }
@@ -156,7 +158,7 @@ export default {
         left 0
         right 0
         bottom 0
-        background-color rgb(198,198,198)
+        background-color rgba(198,198,198, 1)
         box-shadow  0 -4px 10px #888888;
         margin-left 0
         margin-right 0

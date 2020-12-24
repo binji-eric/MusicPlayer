@@ -12,7 +12,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(item, index) in songs" :key="item.id">
+                <tr v-for="(item, index) in songs" :key="item.name">
                     <td>{{index + 1}}</td>
                     <td>
                         <div @click="playSong(item.id, index)" class="playButton">
@@ -97,7 +97,8 @@
                         this.$store.commit('setSongs', this.songs)
                     }
                     this.$store.commit('setTotal', this.songs.length)
-                    this.$store.dispatch('play', { name: 'songTable', num: index })
+                    console.log('in the songTable')
+                    this.$store.dispatch('play', { num: index, name: 'songTable' })
                 }
             }
         }

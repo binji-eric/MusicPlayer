@@ -2,7 +2,7 @@
     <div class="singerItem" @click="goToSingerDetail(singerId)">
         <img :src="imgUrl" alt="" class="image">
         <div class="name">
-            <h5>{{singerName}}</h5>
+            <h5 style="margin-top: 0">{{singerName}}</h5>
         </div>
     </div>
 </template>
@@ -37,12 +37,12 @@
         position relative
         display inline-block
         padding 5px
-        width: 90%
-        height 90%
+        width: 100%
+        height 100%
         maring 5px
         .image {
-            width 80%
-            height 75%
+            width 90%
+            height 90%
             border-radius 5px
             object-fit cover
         }
